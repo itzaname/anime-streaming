@@ -1,0 +1,26 @@
+{{define "title"}}View Anime{{end}}
+{{define "head"}}{{end}}
+{{define "content"}}
+<div class="container">
+	<div class="anime-info">
+		<div class="details">
+			<img src="{{.anime.Info.Image}}">
+			<h2>{{.anime.Info.Title}}</h2>
+			<ul class="info">
+				<li><span class="label">Synonyms: </span>{{.anime.Info.Synonyms}}</li>
+				<li><span class="label">Status: </span>{{.anime.Info.StatusString}}</li>
+				<li><span class="label">Air Date: </span>{{.anime.Info.Start}}</li>
+				<li><span class="label">Finish Date: </span>{{.anime.Info.End}}</li>
+				<li><span class="label">Episodes: </span>{{.anime.Info.Episodes}}</li>
+			</ul>
+		</div>
+		<div class="episodes">
+			<div class="well well-sm">
+				<h2>Dank meme</h2>
+			</div>
+		</div>
+	</div>
+</div>
+{{end}}
+{{define "foot"}}
+{{end}}

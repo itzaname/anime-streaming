@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+	background: #2B2E35;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+	text-decoration: none;
+	-webkit-transition: color .1s ease-in-out 0s;
+	-khtml-transition: color .1s ease-in-out 0s;
+	-moz-transition: color .1s ease-in-out 0s;
+	-ms-transition: color .1s ease-in-out 0s;
+	-o-transition: color .1s ease-in-out 0s;
+	transition: color .1s ease-in-out 0s;
+}
+
+h2 {
+	color: #DDDDDD;
+}
+
+hr {
+	border-top: 1px solid #51525B;
+}
+
+.navbar {
+	background-color: #3E424B;
+	color: #ffffff;
+	border-radius: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar .navbar-nav > .active > a {
+	color: #ffffff;
+	background-color: transparent;
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus,
+.navbar .navbar-nav > .open >a {
+	text-decoration: none;
+	background-color: #33353A;
+}
+
+.navbar .navbar-brand {
+	color: #eeeeee;
+}
+
+.navbar .navbar-toggle {
+	background-color: #eeeeee;
+}
+
+.navbar .icon-bar {
+	background-color: #33353A;
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar-brand,
+	.navbar-nav li a {
+		line-height: 60px;
+		height: 60px;
+		padding-top: 0;
+	}
+	.navbar-nav .dropdown-menu li a {
+		line-height: 25px;
+		height: 25px;
+	}
+}
+
+.item {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+.item:hover a {
+	color: #cdcdcd!important;
+}
+
+.item .poster {
+	background: #000;
+}
+
+.item .poster img {
+	width: 100%;
+	height: 350px;
+	opacity: 1;
+}
+
+.compressed .poster img {
+	height: 200px;
+}
+
+.watching .poster img {
+	border: 1px solid #02FF0A;
+}
+
+.dropped .poster img {
+	border: 1px solid #FF0000;
+}
+
+.hold .poster img {
+	border: 1px solid #FFBD00;
+}
+
+.completed .poster img {
+	border: 1px solid #0051FF;
+}
+
+.planned .poster img {
+	border: 1px solid #ECECEC;
+}
+
+.item .title {
+	display: block;
+	margin-top: 5px;
+	height: 40px;
+	color: #9a9a9a;
+	text-align: center;
+	font-weight: 500;
+}
+
+.poster-container {
+	position: relative;
+}
+
+.poster-container .poster-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	color: #FFF;
+}
+
+.item:hover .poster-overlay {
+	display: block;
+	background: rgba(0, 0, 0, .6);
+}
+
+.item .episodes {
+	top: 5px;
+	margin-left: 5px;
+	min-width: 30px;
+	position: absolute;
+	z-index: 15;
+	padding: 2px 5px;
+	background: #000000;
+	color: #eee;
+	text-align: center;
+	font-weight: 400;
+	font-size: .9rem;
+	border-radius: 2px;
+}
+
+.item .status {
+	top: 5px;
+	right: 20px;
+	margin-left: 5px;
+	min-width: 30px;
+	position: absolute;
+	z-index: 15;
+	padding: 2px 5px;
+	background: #000000;
+	color: #eee;
+	text-align: center;
+	font-weight: 400;
+	font-size: .9rem;
+	border-radius: 2px;
+}
+
+.search-container {
+	padding-bottom: 20px;
+}
+
+.search-container .search {
+	width: 100%;
+	background: none;
+	border: none;
+	text-align: center;
+	color: #DDDDDD;
+	font-size: 22pt;
+}
+
+.search-container .search:focus {
+	outline: none;
+}
+
+.anime-info .details {
+	max-width: 230px;
+	display: inline-block;
+}
+
+.anime-info .details img {
+	border: 1px solid #DDDDDD;
+}
+
+.anime-info .details h2 {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.anime-info .details ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.anime-info .details li {
+	color: #AAAAAA;
+}
+
+.anime-info .details .label {
+	color: #DDDDDD;
+}
+
+.anime-info .episodes {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+}

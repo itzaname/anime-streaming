@@ -1,0 +1,36 @@
+{
+  "Webserver": {
+    "Listen": "0.0.0.0",
+    "Port": "8080"
+  },
+  "Database": {
+    "Address": "127.0.0.1",
+    "Port": "6379",
+    "Password": "",
+    "Database": 0
+  },
+  "View": {
+    "BaseURI": "/",
+    "Extension": "tmpl",
+    "Folder": "templates",
+    "Name": "blank",
+    "Caching": true
+  },
+  "Template": {
+    "Root":"base",
+    "Children": [
+
+    ]
+  },
+  "Session": {
+    "SecreteKey": "f0d4ikLQ0XqLlmpFwfKu43dVY4pYxULI",
+    "Name":"oblivion",
+    "Options": {
+      "Path": "/",
+      "Domain": "",
+      "MaxAge": 28000,
+      "Secure": false,
+      "HttpOnly": true
+    }
+  }
+}

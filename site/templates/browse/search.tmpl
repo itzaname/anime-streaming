@@ -1,0 +1,49 @@
+{{define "title"}}View Anime{{end}}
+{{define "head"}}{{end}}
+{{define "content"}}
+<div class="container">
+	<div class="search-container">
+		<input autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" id="search" name="search" class="search" placeholder="Search">
+	</div>
+	<div class="row">
+		{{range .anime}}
+		<div class="anime-item col-lg-2 col-md-2 col-sm-3 col-xs1-4 col-xs-6" style="display: none;">
+			<div class="{{.class}} compressed item">
+				<div class="poster">
+					<a href="{{.url}}">
+						<div class="poster-container">
+							<img data-src="{{.image}}">
+							<div class="poster-overlay"></div>
+						</div>
+					</a>
+				</div>
+				<div class="episodes"> {{.episode}}/{{.episodes}} </div>
+				<div class="status">{{.status}}</div>
+				<div class="names" style="display:none;">{{.titles}}</div>
+				<a href="{{.url}}" class="title">{{.title}}</a>
+			</div>
+		</div>
+		{{end}}
+	</div>
+</div>
+{{end}}
+{{define "foot"}}
+<script>
+
+$("#search").keyup(function() {
+	var search = $(this).val().substring(0, 35).toLowerCase();
+	$(".anime-item").each(function() {
+		var elem = $(this);
+		var title = elem.find(".names").html().toLowerCase();
+		if (search.length > 0 && title.indexOf(search) !== -1) {
+			elem.fadeIn(500);
+			var img = elem.find("img")
+			img.attr("src",img.data("src"));
+		} else {
+			elem.fadeOut(500);
+		}
+	});
+});
+
+</script>
+{{end}}
